@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
+      <Head>
+        <title>Nextjs App</title>
+        <meta name="keyword" content="web development, programming"/>
+      </Head>
     <h1>Welcome to my nextjs World!</h1>
     </div>
   )
