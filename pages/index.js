@@ -7,7 +7,7 @@ export default function Home() {
         <title>Nextjs App</title>
         <meta name="keyword" content="web development, programming"/>
       </Head>
-    <h1>Welcome to my next js World!</h1>
+    <h1>Welcome to my next  js World!</h1>
     </div>
   )
 }
