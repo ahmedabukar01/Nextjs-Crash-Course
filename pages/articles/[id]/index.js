@@ -1,7 +1,7 @@
-import {useRouter} from 'next/router';
+import  {useRouter}  from 'next/router';
 import Link from 'next/link'
 
-const article = ({article}) => {
+const Article = ({article}) => {
     const router = useRouter();
     const { id } = router.query
   return (
@@ -9,22 +9,22 @@ const article = ({article}) => {
         <h1>{article.title}</h1>
         <p>{article.body}</p>
         <br />
-        <link href="/"Go back></link>
+        <Link href="/"Go back>Go back</Link>
     </div>
   )
 }
-
-// export const getServerSideProps = async(context)=>{
-//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`);
+/*
+export const getServerSideProps = async(context)=>{
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`);
     
-//     const article = await res.json();
+    const article = await res.json();
 
-//     return {
-//         props: {
-//             article
-//         }
-//     }
-// }
+    return {
+        props: {
+            article
+        }
+    }
+} */
 
 export const getStaticProps = async(context)=>{
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`);
@@ -51,4 +51,4 @@ export const getStaticPaths = async()=>{
         fallback: false
     }
 }
-export default article
+export default Article
